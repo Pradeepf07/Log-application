@@ -1,0 +1,96 @@
+<div class="row" style="margin-top: 18px">
+
+    <div class="col-md-2">
+        <a [routerLink]="[ '/home' ]"><img src="../../assets/left-arrow.png" width="10%"></a>
+
+        <img src="../../assets/algorithm.png" width="80%" style="margin-right: 50px">
+    </div>
+    <div class="col-md-8">
+        <h4>ALGORITHAM EXECUTION</h4>
+        <small>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia nobis quasi, reprehenderit quo a
+            laboriosam voluptates omnis placeat exercitationem delectus deserunt perferendis nisi inventore, vitae,
+            autem sed! Magnam, provident voluptas.</small>
+    </div>
+</div>
+<div class="row" style="margin-top: 5%">
+    <div class="col-md-3">
+        <a>
+            <h6 (click)="switch2()">LOG STRUCTURE</h6>
+        </a>
+        <small>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</small>
+    </div>
+    <div class="col-md-3">
+        <a>
+            <h6 (click)="accesslistgeneration()">ACCESS LIST GENERATION</h6>
+        </a>
+        <small>Lorem ipsum dolor, sit amet consectetur adipisicing elit.!</small>
+    </div>
+    <div class="col-md-3">
+        <a>
+            <h6 (click)="unauthorizedlist()">UNAUTHORIZED ACCESS LIST GENERATE</h6>
+        </a>
+        <small>Lorem ipsum dolor, sit amet consectetur adipisicing elit</small>
+    </div>
+    
+    <div [hidden]="switchkey2" class="col-md-12" style="margin-top: 2%">
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Operation Type</th>
+                    <th scope="col">Data Hash</th>
+                    <th scope="col">UserList Version</th>
+                    <th scope="col">User HashID</th>
+                    <th scope="col">Timestamp</th>
+                    <th scope="col">ChainHash</th>
+                    <th scope="col">Signature</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of logdata">
+                    <th scope="row">{{item.operation}}</th>
+                    <td>{{item.filename}}</td>
+                    <td>{{item.username}}</td>
+                    <td>{{item.ulv}}</td>
+                    <td>{{item.date}}</td>
+                    <td>{{item.chash}}</td>
+                    <td>{{item.sign}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div [hidden]="switchkey" class="col-md-12" style="margin-top: 2%">
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Access List</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of accessList">
+                    <th scope="row">{{item.username}}</th>
+                    <td>{{item.filename}}</td>
+                    <td>{{item.authorized}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div [hidden]="unauther" class="col-md-12" style="margin-top: 2%">
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Access List</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of accessList2">
+                    <th scope="row">{{item.username}}</th>
+                    <td>{{item.filename}}</td>
+                    <td>{{item.authorized}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

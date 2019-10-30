@@ -1,0 +1,56 @@
+<div class="row" style="margin-top: 10px">
+    <div class="col-md-3">
+    </div>
+    <div class="col-md-2" style="text-align: left;margin-left: 0%">
+        <a (click)="uploadfiles()" style="text-decoration: none">
+            <img src="../../assets/upload.png" width="60%" style="margin-right: 50px">
+            <span>Upload Files</span>
+        </a>
+    </div>
+    <div class="col-md-2" style="text-align: left">
+        <a (click)="logman()" style="text-decoration: none">
+            <img src="../../assets/log.png" width="60%" style="margin-right: 50px">
+            <span>Log Details</span>
+        </a>
+    </div>
+    <div class="col-md-2" style="text-align: left">
+        <a style="text-decoration: none" (click)="algoritham_r()">
+            <img src="../../assets/algorithm.png" width="60%" style="margin-right: 50px">
+            <span>Execute Algoritham</span>
+        </a>
+    </div>
+</div>
+<div class="row" style="margin-top: 5%">
+    <h6 class="col-md-12">UPLDED FILE LIST</h6>
+    <small class="col-md-12">Lorem ipsum dolor, sit amet consectetur adipisicing elit. In, deleniti assumenda
+        tempora illo optio praesentium facilis maiores illum quos exercitationem ipsam facere mollitia ratione
+        aliquid, et harum officiis unde inventore!</small>
+    <div class="col-md-12" style="margin-top: 2%">
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">File Name</th>
+                    <th scope="col">Upload On</th>
+                    <th scope="col">Actions</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of filedata">
+                    <th scope="row">
+                        <img src="../../assets/file.png">
+                    </th>
+                    <td>{{item.filename}}</td>
+                    <td>{{item.createdon.toDate()|date:'MMM dd yyyy hh:mm a'}}</td>
+                    <td>
+                        <a title="marked as viewed" style="margin-right: 20px;font-size: 22px;color:#0080ff" (click)="viewdata(item.filename,item.fileId)"><i class="fa fa-eye"></i></a>
+                        <a title="marked as Edited" style="margin-right: 10px;font-size: 22px;color: #408080" (click)="editdata(item.filename,item.fileId)"><i class="fa fa-edit"></i></a>
+                        <!-- <a style="margin-right: 10px;font-size: 22px" (click)="viewdata(item.filename)"><i class="fa fa-trash"></i></a> -->
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

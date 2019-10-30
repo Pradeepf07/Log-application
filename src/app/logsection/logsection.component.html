@@ -1,0 +1,32 @@
+<div class="row" style="margin-top: 18px">
+
+  <div class="col-md-2">
+    <a [routerLink]="[ '/home' ]"><img src="../../assets/left-arrow.png" width="10%"></a>
+
+    <img src="../../assets/log.png" width="80%" style="margin-right: 50px">
+  </div>
+  <div class="col-md-6">
+    <h4>LOG MANAGEMENT SECTION</h4>
+    <small>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia nobis quasi, reprehenderit quo a
+      laboriosam voluptates omnis placeat exercitationem delectus deserunt perferendis nisi inventore, vitae,
+      autem sed! Magnam, provident voluptas.</small>
+  </div>
+</div>
+<div class="row" style="margin-top: 5%">
+  <h6 class="col-md-12">UPLDED FILE LIST</h6>
+  <small class="col-md-12">Lorem ipsum dolor, sit amet consectetur adipisicing elit. In, deleniti assumenda
+    tempora illo optio praesentium facilis maiores illum quos exercitationem ipsam facere mollitia ratione
+    aliquid, et harum officiis unde inventore!</small>
+  <div class="col-md-12" style="margin-top: 2%">
+    <div class="row">
+      <div>
+        <ul>
+          <li *ngFor="let item of logdata" style="margin-bottom: 5px;color:#004040">
+           <small class="text-muted"> {{item.date.toDate()|date:'MMM dd yyyy hh:mm a'}} </small>
+           <small style="margin-left: 20px;"> {{item.username}} 
+            {{item.operation}} on file {{item.filename}} </small>
+          </li>
+        </ul> 
+      </div>
+    </div>
+  </div>

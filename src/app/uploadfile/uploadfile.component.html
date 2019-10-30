@@ -1,0 +1,31 @@
+<div class="row" style="margin-top: 18px">
+
+    <div class="col-md-2">
+        <a [routerLink]="[ '/home' ]"><img src="../../assets/left-arrow.png" width="10%"></a>
+
+        <img src="../../assets/upload.png" width="80%" style="margin-right: 50px">
+    </div>
+    <div class="col-md-6">
+        <h4>UPLOAD FILES SECTION</h4>
+        <small>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia nobis quasi, reprehenderit quo a
+            laboriosam voluptates omnis placeat exercitationem delectus deserunt perferendis nisi inventore, vitae,
+            autem sed! Magnam, provident voluptas.</small>
+    </div>
+</div>
+<div class="row" style="margin-top: 5%">
+    <h6 class="col-md-12">UPLDED FILE LIST</h6>
+    <small class="col-md-12">Lorem ipsum dolor, sit amet consectetur adipisicing elit. In, deleniti assumenda
+        tempora illo optio praesentium facilis maiores illum quos exercitationem ipsam facere mollitia ratione
+        aliquid, et harum officiis unde inventore!</small>
+    <div class="col-md-12" style="margin-top: 2%">
+        <div class="row">
+            <div class="form-group col-md-6">
+                <label for="exampleInputPassword1">File Name</label>
+                <input type="text" class="form-control" #filename placeholder="eg (filename.doc)">
+            </div>
+            <div class="col-md-2">
+                <button type="submit" class="btn btn-primary" style="margin-top: 20%;width: 100%" (click)="uploaddata(filename)">Upload File</button>
+            </div>
+        </div>
+    </div>
+</div>
