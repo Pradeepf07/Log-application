@@ -33,6 +33,9 @@ export class FilelistComponent implements OnInit {
   algoritham_r(){
     this.router.navigate(["home/algoritham"])
   }
+  graph_r(){
+    this.router.navigate(["home/graph"])
+  }
   viewdata(filename,fileid){
     sessionStorage.getItem("userid");
     let newId = this.firestore.createId();

@@ -13,6 +13,7 @@ import { UploadfileComponent } from './uploadfile/uploadfile.component';
 import { LogsectionComponent } from './logsection/logsection.component';
 import { AlgorithamComponent } from './algoritham/algoritham.component';
 import { HttpClientModule } from '@angular/common/http';
+import { GraphComponent } from './graph/graph.component';
 
 
 
@@ -24,7 +25,8 @@ import { HttpClientModule } from '@angular/common/http';
     FilelistComponent,
     UploadfileComponent,
     LogsectionComponent,
-    AlgorithamComponent
+    AlgorithamComponent,
+    GraphComponent
   ],
   imports: [
     BrowserModule,

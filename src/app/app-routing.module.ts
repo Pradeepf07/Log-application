@@ -7,7 +7,7 @@ import { FilelistComponent } from './filelist/filelist.component';
 import { UploadfileComponent } from './uploadfile/uploadfile.component';
 import { LogsectionComponent } from './logsection/logsection.component';
 import { AlgorithamComponent } from './algoritham/algoritham.component';
-
+import { GraphComponent } from './graph/graph.component';
 
 const routes: Routes = [
   { path:"", component:LoginpageComponent },
@@ -15,7 +15,8 @@ const routes: Routes = [
     { path : "" , component:FilelistComponent },
     { path:"uploadfile" , component:UploadfileComponent },
     { path:"logsection" , component:LogsectionComponent },
-    { path:"algoritham", component: AlgorithamComponent }
+    { path:"algoritham", component: AlgorithamComponent },
+    { path:"graph" , component:GraphComponent }
   ]}
 ];
 
